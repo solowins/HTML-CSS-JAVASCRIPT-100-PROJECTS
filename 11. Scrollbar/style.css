@@ -8,12 +8,14 @@ body {
   
   .scroll-container {
     background: rgb(7, 7, 7);
-    width: 25rem;
+    width: 35rem;
     padding: 30px;
   }
   
   .scroll-div {
-    width: 400px;
+    margin: 0 auto;
+    width: 500px;
+    max-width: 50ch;
     height: 500px;
     background: rgb(7, 7, 7);
     overflow: hidden;
