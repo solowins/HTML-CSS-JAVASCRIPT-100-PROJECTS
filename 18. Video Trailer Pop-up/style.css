@@ -6,7 +6,6 @@
   
   .image-container {
     background: #800080;
-    background: url('./play.png');
     height: 100vh;
     background-position: top;
     background-repeat: no-repeat;
