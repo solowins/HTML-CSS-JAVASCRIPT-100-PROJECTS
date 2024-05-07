@@ -1,0 +1,72 @@
+It seems like you're using JavaScript to create a simple search functionality. Let me explain what each part of your code does:
+
+```javascript
+const p = document.getElementById("p");
+const searchBtn = document.getElementById("searchBtn");
+```
+These lines retrieve references to HTML elements with the IDs "p" and "searchBtn", respectively. The assumption here is that you have an HTML element with the ID "p" (probably a paragraph element) and another element with the ID "searchBtn" (probably a button).
+
+```javascript
+searchBtn.addEventListener("click", () => {
+  let input = document.getElementById("input").value;
+```
+This part adds an event listener to the "searchBtn" button. When the button is clicked, it retrieves the value entered into the input field with the ID "input".
+
+```javascript
+  if (input !== "") {
+```
+This conditional statement checks if the input value is not empty.
+
+```javascript
+    let regExp = new RegExp(input, "gi");
+```
+Here, a regular expression (`RegExp`) is created using the input value. The "gi" flags indicate that the search should be global (find all matches) and case-insensitive.
+
+```javascript
+    p.innerHTML = p.textContent.replace(regExp, "<mark>$&</mark>");
+```
+Finally, this line replaces the text content of the element with ID "p" with the same content but with matches of the regular expression wrapped in `<mark>` tags. `$&` is a special token in the replacement string that represents the matched substring.
+
+This code essentially searches for the input text within the content of the element with ID "p" and highlights all occurrences of the input text when the button is clicked.
+
+
+
+Certainly! Here are some common regular expressions along with explanations for each:
+
+\d
+Matches any digit character (0-9).
+For example, \d would match any single digit.
+\w
+Matches any word character (alphanumeric character plus underscore).
+For example, \w would match any single alphanumeric character or underscore.
+\s
+Matches any whitespace character (spaces, tabs, line breaks).
+For example, \s would match any single whitespace character.
+.
+Matches any single character except for line breaks.
+For example, . would match any single character, such as "a", "1", or "%".
+\b
+Matches a word boundary, such as the position between a word character (\w) and a non-word character (\W).
+For example, \bword\b would match the word "word" only when it appears as a separate word, not as part of another word.
+^
+Matches the start of a string.
+For example, ^hello would match "hello" only if it appears at the beginning of a string.
+$
+Matches the end of a string.
+For example, world$ would match "world" only if it appears at the end of a string.
+[ ]
+Matches any one of the characters inside the square brackets.
+For example, [abc] would match either "a", "b", or "c".
+[^ ]
+Matches any character NOT inside the square brackets.
+For example, [^0-9] would match any character that is not a digit.
+\d+
+Matches one or more consecutive digits.
+For example, \d+ would match "123" in the string "abc123def".
+\w+
+Matches one or more consecutive word characters.
+For example, \w+ would match "hello" in the string "hello_world".
+\s+
+Matches one or more consecutive whitespace characters.
+For example, \s+ would match multiple spaces or tabs in a row.
+These are just a few examples of common regular expressions. Regular expressions can be combined and modified in various ways to create more complex patterns for matching text.
