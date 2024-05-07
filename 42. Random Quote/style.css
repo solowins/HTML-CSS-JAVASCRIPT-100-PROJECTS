@@ -34,6 +34,17 @@
     font-family: sans-serif;
     font-size: 1.2rem;
   }
+
+  span:before{
+    content: "\201c";
+    font-size: 6rem;
+    font-family: sans-serif;
+    color: #fdbb11;
+    position: sticky;
+    left: 40px;
+    top: 10px;
+    animation: anime 1s ease-out;
+  }
   
   span,
   small {
@@ -41,7 +52,7 @@
   }
   
   .btn {
-    padding: 10px 30px;
+    padding: 15px 30px;
     background-color: #fdbb11;
     border: none;
     cursor: pointer;
