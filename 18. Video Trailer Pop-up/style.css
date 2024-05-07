@@ -5,7 +5,7 @@
   }
   
    .image-container {
-    background: #800080;
+    background: url('peakpx.jpg');
     height: 100vh;
     background-position: top;
     background-repeat: no-repeat;
